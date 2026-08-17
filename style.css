@@ -40,8 +40,10 @@ header.site-header{
   max-width:1240px; margin:0 auto; padding:18px 24px;
   display:flex; align-items:center; justify-content:space-between;
 }
-.logo{font-size:21px; font-weight:800; letter-spacing:-0.5px;}
+.logo{font-size:21px; font-weight:800; letter-spacing:-0.5px; display:flex; align-items:center;}
 .logo::after{content:''; }
+.logo img{display:block; height:36px; width:auto; max-width:200px;}
+.logo .custom-logo-link{display:flex; align-items:center;}
 nav.primary ul{display:flex; gap:36px; list-style:none;}
 nav.primary li{position:relative;}
 nav.primary li a{font-size:17px; font-weight:700; letter-spacing:0.2px; padding:10px 0; display:inline-block;}

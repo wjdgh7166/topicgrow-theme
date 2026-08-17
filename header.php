@@ -10,9 +10,15 @@
 
 <header class="site-header">
   <div class="header-inner">
-    <a href="<?php echo esc_url(home_url('/')); ?>" class="logo">
-      <?php bloginfo('name'); ?>
-    </a>
+    <?php if (has_custom_logo()) : ?>
+      <div class="logo">
+        <?php the_custom_logo(); ?>
+      </div>
+    <?php else : ?>
+      <a href="<?php echo esc_url(home_url('/')); ?>" class="logo">
+        <?php bloginfo('name'); ?>
+      </a>
+    <?php endif; ?>
     <nav class="primary" id="primary-menu">
       <?php
       wp_nav_menu([

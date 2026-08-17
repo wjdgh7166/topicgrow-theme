@@ -5,6 +5,12 @@ add_action('after_setup_theme', function () {
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
     add_theme_support('automatic-feed-links');
+    add_theme_support('custom-logo', [
+        'height'      => 80,
+        'width'       => 240,
+        'flex-height' => true,
+        'flex-width'  => true,
+    ]);
     register_nav_menus([
         'primary' => 'Primary Menu',
         'footer'  => 'Footer Menu',
