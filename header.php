@@ -13,7 +13,7 @@
     <a href="<?php echo esc_url(home_url('/')); ?>" class="logo">
       <?php bloginfo('name'); ?>
     </a>
-    <nav class="primary">
+    <nav class="primary" id="primary-menu">
       <?php
       wp_nav_menu([
           'theme_location' => 'primary',
@@ -24,7 +24,7 @@
       ?>
     </nav>
     <div class="header-actions">
-      <div class="burger"><span></span><span></span><span></span></div>
+      <div class="burger" id="burger-toggle" role="button" tabindex="0" aria-expanded="false" aria-controls="primary-menu" aria-label="메뉴 열기"><span></span><span></span><span></span></div>
     </div>
   </div>
 </header>

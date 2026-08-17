@@ -26,4 +26,11 @@ add_action('wp_enqueue_scripts', function () {
         [],
         wp_get_theme()->get('Version')
     );
+    wp_enqueue_script(
+        'topicgrow-main',
+        get_stylesheet_directory_uri() . '/js/main.js',
+        [],
+        wp_get_theme()->get('Version'),
+        true
+    );
 });
