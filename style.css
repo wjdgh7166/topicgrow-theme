@@ -147,9 +147,12 @@ nav.primary .sub-menu a:hover{background:var(--bg); color:var(--accent);}
 
 .single-post .author-box{display:flex; gap:16px; align-items:flex-start; margin-top:44px; padding:24px; background:var(--card-bg); border:1px solid var(--line); border-radius:16px;}
 .single-post .author-box-avatar img{border-radius:50%; display:block;}
-.single-post .author-box-name{font-weight:800; font-size:15px; display:inline-block; margin-bottom:6px;}
-.single-post .author-box-name:hover{color:var(--accent);}
-.single-post .author-box-bio{font-size:14px; line-height:1.7; color:var(--sub);}
+.single-post .author-box-label{font-weight:800; font-size:15px; margin-bottom:8px;}
+.single-post .author-box-name{color:var(--accent);}
+.single-post .author-box-name:hover{text-decoration:underline;}
+.single-post .author-box-bio{font-size:14px; line-height:1.7; color:var(--sub); margin-bottom:10px;}
+.single-post .author-box-more{font-size:13px; font-weight:700; color:var(--accent);}
+.single-post .author-box-more:hover{text-decoration:underline;}
 
 /* ---------- Newsletter CTA ---------- */
 .cta{

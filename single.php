@@ -23,8 +23,9 @@
           <?php echo get_avatar(get_the_author_meta('ID'), 64, '', '', ['class' => 'avatar']); ?>
         </a>
         <div class="author-box-body">
-          <a href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>" class="author-box-name"><?php the_author(); ?></a>
+          <p class="author-box-label">이 글을 쓴 사람 — <a href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>" class="author-box-name"><?php the_author(); ?></a></p>
           <p class="author-box-bio"><?php echo esc_html(get_the_author_meta('description')); ?></p>
+          <a href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>" class="author-box-more"><?php the_author(); ?>이 쓴 다른 글 보기</a>
         </div>
       </div>
 
