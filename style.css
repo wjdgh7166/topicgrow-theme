@@ -42,9 +42,9 @@ header.site-header{
 }
 .logo{font-size:21px; font-weight:800; letter-spacing:-0.5px;}
 .logo::after{content:''; }
-nav.primary ul{display:flex; gap:30px; list-style:none;}
+nav.primary ul{display:flex; gap:36px; list-style:none;}
 nav.primary li{position:relative;}
-nav.primary li a{font-size:14px; font-weight:700; letter-spacing:0.3px; padding:8px 0; display:inline-block;}
+nav.primary li a{font-size:17px; font-weight:700; letter-spacing:0.2px; padding:10px 0; display:inline-block;}
 nav.primary li:hover > a{color:var(--accent);}
 nav.primary li.current-menu-item > a{color:var(--accent);}
 nav.primary .sub-menu{
