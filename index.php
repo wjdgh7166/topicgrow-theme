@@ -15,13 +15,19 @@
         ?>
         <section class="hero">
           <a class="hero-card" href="<?php the_permalink(); ?>">
-            <?php if (has_post_thumbnail()) the_post_thumbnail('full'); ?>
+            <?php if (has_post_thumbnail()) : ?>
+              <div class="hero-media"><?php the_post_thumbnail('full'); ?></div>
+            <?php endif; ?>
             <div class="hero-overlay">
               <?php $cats = get_the_category(); if (!empty($cats)) : ?>
                 <span class="hero-tag"><?php echo esc_html($cats[0]->name); ?></span>
               <?php endif; ?>
               <h1 class="hero-title"><?php the_title(); ?></h1>
               <p class="hero-excerpt"><?php echo esc_html(get_the_excerpt()); ?></p>
+              <div class="hero-meta">
+                <?php echo get_avatar(get_the_author_meta('ID'), 20, '', '', ['class' => 'avatar']); ?>
+                <span><?php the_author(); ?> · <?php echo get_the_date('Y.m.d'); ?></span>
+              </div>
             </div>
           </a>
         </section>
@@ -48,6 +54,7 @@
           <a href="<?php the_permalink(); ?>" class="card-title"><?php the_title(); ?></a>
           <p class="card-excerpt"><?php echo esc_html(get_the_excerpt()); ?></p>
           <div class="card-footer">
+            <?php echo get_avatar(get_the_author_meta('ID'), 20, '', '', ['class' => 'avatar']); ?>
             <span class="card-author"><?php the_author(); ?></span>
             <span class="card-date"><?php echo get_the_date('Y.m.d'); ?></span>
           </div>
