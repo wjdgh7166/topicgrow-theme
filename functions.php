@@ -11,6 +11,10 @@ add_action('after_setup_theme', function () {
     ]);
 });
 
+function topicgrow_is_new_post($days = 3) {
+    return (get_the_time('U') > strtotime("-{$days} days"));
+}
+
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style(
         'pretendard',

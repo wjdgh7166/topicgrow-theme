@@ -22,6 +22,9 @@
               <?php $cats = get_the_category(); if (!empty($cats)) : ?>
                 <span class="hero-tag"><?php echo esc_html($cats[0]->name); ?></span>
               <?php endif; ?>
+              <?php if (topicgrow_is_new_post()) : ?>
+                <span class="new-badge">NEW</span>
+              <?php endif; ?>
               <h1 class="hero-title"><?php the_title(); ?></h1>
               <p class="hero-excerpt"><?php echo esc_html(get_the_excerpt()); ?></p>
               <div class="hero-meta">
@@ -50,6 +53,9 @@
         <div class="card-body">
           <?php $cats = get_the_category(); if (!empty($cats)) : ?>
             <span class="tag"><?php echo esc_html($cats[0]->name); ?></span>
+          <?php endif; ?>
+          <?php if (topicgrow_is_new_post()) : ?>
+            <span class="new-badge">NEW</span>
           <?php endif; ?>
           <a href="<?php the_permalink(); ?>" class="card-title"><?php the_title(); ?></a>
           <p class="card-excerpt"><?php echo esc_html(get_the_excerpt()); ?></p>

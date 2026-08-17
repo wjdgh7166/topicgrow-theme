@@ -17,6 +17,39 @@
       <div class="entry-content">
         <?php the_content(); ?>
       </div>
+
+      <?php
+      $cat_ids = wp_get_post_categories(get_the_ID());
+      $related = new WP_Query([
+          'category__in'   => $cat_ids,
+          'post__not_in'   => [get_the_ID()],
+          'posts_per_page' => 3,
+          'ignore_sticky_posts' => true,
+      ]);
+      if ($related->have_posts()) :
+      ?>
+        <div class="related">
+          <div class="related-title">관련 글</div>
+          <div class="related-grid">
+            <?php while ($related->have_posts()) : $related->the_post(); ?>
+              <article class="card">
+                <a class="card-img" href="<?php the_permalink(); ?>">
+                  <?php if (has_post_thumbnail()) the_post_thumbnail('medium_large'); ?>
+                </a>
+                <div class="card-body">
+                  <?php $rcats = get_the_category(); if (!empty($rcats)) : ?>
+                    <span class="tag"><?php echo esc_html($rcats[0]->name); ?></span>
+                  <?php endif; ?>
+                  <a href="<?php the_permalink(); ?>" class="card-title"><?php the_title(); ?></a>
+                  <div class="card-footer">
+                    <span class="card-date"><?php echo get_the_date('Y.m.d'); ?></span>
+                  </div>
+                </div>
+              </article>
+            <?php endwhile; wp_reset_postdata(); ?>
+          </div>
+        </div>
+      <?php endif; ?>
     </article>
   <?php endwhile; ?>
 </main>
