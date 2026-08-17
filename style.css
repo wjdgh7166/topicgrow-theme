@@ -1,0 +1,144 @@
+/*
+Theme Name: TopicGrow
+Theme URI: https://topicgrow.co.kr
+Author: Ian
+Description: the-edit.co.kr 스타일을 참고한 TopicGrow 매거진형 블로그 테마
+Version: 1.0.0
+Requires PHP: 7.4
+Text Domain: topicgrow
+*/
+
+:root{
+  --bg:#fbfcf6;
+  --ink:#111111;
+  --sub:#6b6b62;
+  --orange:#ee8232;
+  --lime:#c4ff30;
+  --line:#e7e7dd;
+  --card-bg:#ffffff;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Pretendard','Apple SD Gothic Neo','Malgun Gothic',sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit; text-decoration:none;}
+img{display:block; max-width:100%; height:auto;}
+.wrap{max-width:1280px; margin:0 auto; padding:0 24px;}
+
+/* ---------- Header ---------- */
+header.site-header{
+  position:sticky; top:0; z-index:100;
+  background:rgba(251,252,246,0.92);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{
+  max-width:1280px; margin:0 auto; padding:16px 24px;
+  display:flex; align-items:center; justify-content:space-between;
+}
+.logo{font-size:22px; font-weight:800; letter-spacing:-0.5px;}
+.logo span{color:var(--orange);}
+nav.primary ul{display:flex; gap:32px; list-style:none;}
+nav.primary li{position:relative;}
+nav.primary li a{font-size:14px; font-weight:700; letter-spacing:0.5px; padding:8px 0; display:inline-block;}
+nav.primary li:hover > a{color:var(--orange);}
+nav.primary .sub-menu{
+  position:absolute; top:100%; left:50%; transform:translateX(-50%);
+  background:var(--card-bg); border:1px solid var(--line); border-radius:10px;
+  padding:10px 0; min-width:110px; box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  display:none; flex-direction:column; z-index:10; list-style:none;
+}
+nav.primary li:hover .sub-menu{display:flex;}
+nav.primary .sub-menu a{font-size:13px; font-weight:500; padding:8px 18px; white-space:nowrap;}
+nav.primary .sub-menu a:hover{background:var(--bg); color:var(--orange);}
+.header-actions{display:flex; align-items:center; gap:18px;}
+.burger{display:none; flex-direction:column; gap:4px; padding:12px; cursor:pointer;}
+.burger span{display:block; width:16px; height:2px; background:var(--ink);}
+
+/* ---------- Hero ---------- */
+.hero{padding:32px 0 12px;}
+.hero-card{position:relative; border-radius:20px; overflow:hidden; aspect-ratio:16/8; background:#ddd; display:block;}
+.hero-card img{width:100%; height:100%; object-fit:cover;}
+.hero-overlay{
+  position:absolute; inset:0;
+  background:linear-gradient(to top, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.25) 45%, rgba(0,0,0,0) 70%);
+  display:flex; flex-direction:column; justify-content:flex-end;
+  padding:40px; color:#fff;
+}
+.hero-tag{
+  display:inline-block; background:var(--lime); color:#111; font-size:12px; font-weight:800;
+  padding:5px 12px; border-radius:20px; margin-bottom:14px; width:fit-content; letter-spacing:0.5px;
+}
+.hero-title{font-size:34px; font-weight:800; line-height:1.35; max-width:720px; letter-spacing:-0.5px;}
+.hero-excerpt{margin-top:10px; font-size:15px; opacity:0.85; max-width:600px;}
+
+/* ---------- Section headings ---------- */
+.section-title{display:flex; align-items:baseline; gap:10px; margin:52px 0 20px;}
+.section-title h2{font-size:20px; font-weight:800; letter-spacing:-0.3px;}
+.section-title span{font-size:13px; color:var(--sub);}
+
+/* ---------- Grid ---------- */
+.grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:28px; padding-bottom:60px;}
+.card{
+  background:var(--card-bg); border-radius:16px; overflow:hidden; border:1px solid var(--line);
+  display:flex; flex-direction:column; transition:transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover{transform:translateY(-4px); box-shadow:0 16px 32px rgba(0,0,0,0.08);}
+.card-img{width:100%; aspect-ratio:4/3; overflow:hidden; background:#eee; display:block;}
+.card-img img{width:100%; height:100%; object-fit:cover;}
+.card-body{padding:18px 20px 20px; display:flex; flex-direction:column; gap:8px; flex:1;}
+.tag{
+  align-self:flex-start; font-size:11px; font-weight:800; letter-spacing:0.6px;
+  color:var(--orange); border:1px solid var(--orange); border-radius:20px; padding:3px 10px;
+}
+.card-title{font-size:16px; font-weight:700; line-height:1.4; letter-spacing:-0.3px;}
+.card-excerpt{font-size:13px; color:var(--sub); line-height:1.5;}
+.card-footer{
+  margin-top:auto; padding-top:12px; display:flex; align-items:center; justify-content:space-between;
+  border-top:1px dashed var(--line);
+}
+.card-author{font-size:12px; color:var(--sub);}
+.card-date{font-size:12px; color:var(--sub);}
+
+/* ---------- Single post ---------- */
+.single-post{max-width:760px; margin:0 auto; padding:50px 0 80px;}
+.single-post .single-tag{
+  color:var(--orange); font-size:12px; font-weight:800; letter-spacing:0.6px;
+}
+.single-post h1{font-size:32px; font-weight:800; line-height:1.4; margin:14px 0; letter-spacing:-0.5px;}
+.single-post .single-meta{font-size:13px; color:var(--sub); margin-bottom:28px;}
+.single-post .single-thumb{border-radius:16px; overflow:hidden; margin-bottom:32px;}
+.single-post .entry-content{font-size:16px; line-height:1.9;}
+.single-post .entry-content p{margin-bottom:20px;}
+.single-post .entry-content img{border-radius:12px; margin:24px 0;}
+.single-post .entry-content h2{font-size:22px; font-weight:800; margin:36px 0 14px;}
+.single-post .entry-content h3{font-size:18px; font-weight:800; margin:28px 0 10px;}
+
+/* ---------- Footer ---------- */
+footer.site-footer{border-top:1px solid var(--line); padding:50px 0 30px; margin-top:40px;}
+.footer-top{
+  display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:24px; padding-bottom:24px;
+}
+.footer-logo{font-size:20px; font-weight:800;}
+.footer-menu ul{display:flex; gap:22px; list-style:none; flex-wrap:wrap;}
+.footer-menu a{font-size:13px; font-weight:600; color:var(--sub);}
+.footer-menu a:hover{color:var(--orange);}
+.footer-bottom{
+  border-top:1px solid var(--line); padding-top:20px; display:flex; justify-content:space-between;
+  flex-wrap:wrap; gap:10px; font-size:12px; color:var(--sub);
+}
+
+@media (max-width:960px){
+  nav.primary{display:none;}
+  .burger{display:flex;}
+  .grid{grid-template-columns:repeat(2,1fr);}
+  .hero-title{font-size:24px;}
+}
+@media (max-width:600px){
+  .grid{grid-template-columns:1fr;}
+  .hero-card{aspect-ratio:4/5;}
+}
