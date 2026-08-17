@@ -145,6 +145,12 @@ nav.primary .sub-menu a:hover{background:var(--bg); color:var(--accent);}
 .single-post .entry-content h3{font-size:19px; font-weight:800; margin:30px 0 11px;}
 .single-post .entry-content a{color:var(--accent); text-decoration:underline;}
 
+.single-post .author-box{display:flex; gap:16px; align-items:flex-start; margin-top:44px; padding:24px; background:var(--card-bg); border:1px solid var(--line); border-radius:16px;}
+.single-post .author-box-avatar img{border-radius:50%; display:block;}
+.single-post .author-box-name{font-weight:800; font-size:15px; display:inline-block; margin-bottom:6px;}
+.single-post .author-box-name:hover{color:var(--accent);}
+.single-post .author-box-bio{font-size:14px; line-height:1.7; color:var(--sub);}
+
 /* ---------- Newsletter CTA ---------- */
 .cta{
   margin:20px 0 74px; padding:54px 42px; border-radius:22px;

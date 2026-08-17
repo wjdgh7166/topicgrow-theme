@@ -18,6 +18,16 @@
         <?php the_content(); ?>
       </div>
 
+      <div class="author-box">
+        <a href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>" class="author-box-avatar">
+          <?php echo get_avatar(get_the_author_meta('ID'), 64, '', '', ['class' => 'avatar']); ?>
+        </a>
+        <div class="author-box-body">
+          <a href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>" class="author-box-name"><?php the_author(); ?></a>
+          <p class="author-box-bio"><?php echo esc_html(get_the_author_meta('description')); ?></p>
+        </div>
+      </div>
+
       <?php
       $cat_ids = wp_get_post_categories(get_the_ID());
       $related = new WP_Query([
