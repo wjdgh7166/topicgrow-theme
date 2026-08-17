@@ -25,7 +25,7 @@
               <h1 class="hero-title"><?php the_title(); ?></h1>
               <p class="hero-excerpt"><?php echo esc_html(get_the_excerpt()); ?></p>
               <div class="hero-meta">
-                <?php echo get_avatar(get_the_author_meta('ID'), 20, '', '', ['class' => 'avatar']); ?>
+                <?php echo get_avatar(get_the_author_meta('ID'), 24, '', '', ['class' => 'avatar']); ?>
                 <span><?php the_author(); ?> · <?php echo get_the_date('Y.m.d'); ?></span>
               </div>
             </div>

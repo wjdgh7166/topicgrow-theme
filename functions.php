@@ -13,8 +13,8 @@ add_action('after_setup_theme', function () {
 
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style(
-        'inter',
-        'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'
+        'pretendard',
+        'https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css'
     );
     wp_enqueue_style(
         'topicgrow-style',
