@@ -3,7 +3,7 @@ Theme Name: TopicGrow
 Theme URI: https://topicgrow.co.kr
 Author: Ian
 Description: TopicGrow 매거진 에디토리얼 스타일 블로그 테마
-Version: 3.2.1
+Version: 3.2.2
 Requires PHP: 7.4
 Text Domain: topicgrow
 */
@@ -279,4 +279,12 @@ footer.site-footer{border-top:1px solid var(--line); padding:50px 0 30px; margin
 }
 #ez-toc-container .ez-toc-list .ez-toc-list .ez-toc-link:hover{
   color:var(--accent) !important;
+}
+
+/* Rank Math's own TOC block is kept in post content only so RankMath's
+   SEO checklist ("has a table of contents") detects it — the visible
+   TOC on the page is the styled ez-toc box above, so this stays hidden
+   to avoid showing two tables of contents. */
+#rank-math-toc{
+  display:none !important;
 }
