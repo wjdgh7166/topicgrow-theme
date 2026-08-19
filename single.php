@@ -11,9 +11,6 @@
         <?php echo get_avatar(get_the_author_meta('ID'), 20, '', '', ['class' => 'avatar']); ?>
         <span><?php the_author(); ?> · <?php echo get_the_date('Y.m.d'); ?></span>
       </div>
-      <?php if (has_post_thumbnail()) : ?>
-        <div class="single-thumb"><?php the_post_thumbnail('full'); ?></div>
-      <?php endif; ?>
       <div class="entry-content">
         <?php the_content(); ?>
       </div>
