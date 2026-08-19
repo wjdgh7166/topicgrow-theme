@@ -23,10 +23,6 @@ function topicgrow_is_new_post($days = 3) {
 
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style(
-        'pretendard',
-        'https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css'
-    );
-    wp_enqueue_style(
         'topicgrow-style',
         get_stylesheet_uri(),
         [],

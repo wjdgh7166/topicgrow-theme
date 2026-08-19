@@ -3,10 +3,39 @@ Theme Name: TopicGrow
 Theme URI: https://topicgrow.co.kr
 Author: Ian
 Description: TopicGrow 매거진 에디토리얼 스타일 블로그 테마
-Version: 3.2.2
+Version: 3.2.3
 Requires PHP: 7.4
 Text Domain: topicgrow
 */
+
+@font-face{
+  font-family:'Pretendard';
+  font-weight:500;
+  font-style:normal;
+  font-display:swap;
+  src:url('fonts/Pretendard-Medium.woff2') format('woff2');
+}
+@font-face{
+  font-family:'Pretendard';
+  font-weight:600;
+  font-style:normal;
+  font-display:swap;
+  src:url('fonts/Pretendard-SemiBold.woff2') format('woff2');
+}
+@font-face{
+  font-family:'Pretendard';
+  font-weight:700;
+  font-style:normal;
+  font-display:swap;
+  src:url('fonts/Pretendard-Bold.woff2') format('woff2');
+}
+@font-face{
+  font-family:'Pretendard';
+  font-weight:800;
+  font-style:normal;
+  font-display:swap;
+  src:url('fonts/Pretendard-ExtraBold.woff2') format('woff2');
+}
 
 :root{
   --bg:#faf8f3;
