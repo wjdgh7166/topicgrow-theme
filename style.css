@@ -3,7 +3,7 @@ Theme Name: TopicGrow
 Theme URI: https://topicgrow.co.kr
 Author: Ian
 Description: TopicGrow 매거진 에디토리얼 스타일 블로그 테마
-Version: 3.2.0
+Version: 3.2.1
 Requires PHP: 7.4
 Text Domain: topicgrow
 */
@@ -219,4 +219,64 @@ footer.site-footer{border-top:1px solid var(--line); padding:50px 0 30px; margin
   .related-grid{grid-template-columns:1fr;}
   .hero-card{aspect-ratio:4/5;}
   .cta{flex-direction:column; align-items:flex-start;}
+}
+
+/* ---------- Table of Contents (Easy Table of Contents plugin) ---------- */
+#ez-toc-container{
+  display:block;
+  background:var(--card-bg) !important;
+  border:1px solid var(--line) !important;
+  border-radius:16px !important;
+  box-shadow:0 12px 28px rgba(32,29,26,0.05) !important;
+  padding:22px 26px !important;
+  margin:8px 0 34px !important;
+}
+#ez-toc-container .ez-toc-title-container{
+  display:flex; align-items:center; justify-content:space-between;
+  padding-bottom:14px; margin-bottom:6px;
+  border-bottom:1px solid var(--line);
+}
+#ez-toc-container p.ez-toc-title{
+  font-size:16px; font-weight:800; color:var(--ink); letter-spacing:-0.2px;
+}
+#ez-toc-container .ez-toc-toggle .ez-toc-btn{
+  border:none; background:none; padding:4px;
+}
+#ez-toc-container .ez-toc-toggle svg{
+  fill:var(--accent) !important; color:var(--accent) !important;
+}
+#ez-toc-container nav > ul.ez-toc-list{
+  counter-reset:ez-toc-counter;
+  list-style:none; padding:0; margin:0;
+}
+#ez-toc-container nav > ul.ez-toc-list > li{
+  counter-increment:ez-toc-counter;
+  padding:6px 0;
+}
+#ez-toc-container .ez-toc-link{
+  font-size:14.5px; font-weight:600; color:var(--ink) !important;
+  text-decoration:none !important; box-shadow:none;
+  transition:color .15s ease, transform .15s ease;
+}
+#ez-toc-container .ez-toc-link:hover{
+  color:var(--accent) !important; transform:translateX(2px);
+}
+#ez-toc-container nav > ul.ez-toc-list > li > .ez-toc-link::before{
+  content:counter(ez-toc-counter) '.';
+  color:var(--accent); font-weight:800; margin-right:7px;
+}
+#ez-toc-container .ez-toc-list .ez-toc-list{
+  list-style:none; padding-left:22px !important; margin:6px 0 0;
+}
+#ez-toc-container .ez-toc-list .ez-toc-list > li{
+  counter-increment:none; padding:4px 0;
+}
+#ez-toc-container .ez-toc-list .ez-toc-list > li > .ez-toc-link::before{
+  content:'—'; color:var(--sub); font-weight:600; margin-right:7px;
+}
+#ez-toc-container .ez-toc-list .ez-toc-list .ez-toc-link{
+  font-size:13.5px; font-weight:500; color:var(--sub) !important;
+}
+#ez-toc-container .ez-toc-list .ez-toc-list .ez-toc-link:hover{
+  color:var(--accent) !important;
 }
