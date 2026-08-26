@@ -21,6 +21,16 @@ function topicgrow_is_new_post($days = 3) {
     return (get_the_time('U') > strtotime("-{$days} days"));
 }
 
+// 같은 사이트 내 글끼리 링크할 때 생기는 자체 핑백(pingback) 방지
+add_action('pre_ping', function (&$links) {
+    $home = home_url();
+    foreach ($links as $key => $link) {
+        if (strpos($link, $home) === 0) {
+            unset($links[$key]);
+        }
+    }
+});
+
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style(
         'topicgrow-style',
