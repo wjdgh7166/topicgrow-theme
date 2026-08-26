@@ -31,6 +31,11 @@ add_action('pre_ping', function (&$links) {
     }
 });
 
+// Rank Math의 "PRO로 업그레이드" 홍보 배너(워드프레스 업데이트 화면 등에 표시)를 관리자 화면에서 숨김
+add_action('admin_head', function () {
+    echo '<style>#rank_math_pro_notice{display:none !important;}</style>';
+});
+
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style(
         'topicgrow-style',
