@@ -56,7 +56,7 @@ body{
 }
 a{color:inherit; text-decoration:none;}
 img{display:block; max-width:100%; height:auto;}
-.wrap{max-width:1320px; margin:0 auto; padding:0 24px;}
+.wrap{max-width:1500px; margin:0 auto; padding:0 24px;}
 
 /* ---------- Header ---------- */
 header.site-header{
@@ -66,7 +66,7 @@ header.site-header{
   border-bottom:1px solid var(--line);
 }
 .header-inner{
-  max-width:1320px; margin:0 auto; padding:18px 24px;
+  max-width:1500px; margin:0 auto; padding:18px 24px;
   display:flex; align-items:center; justify-content:space-between; gap:24px;
 }
 .logo{font-size:21px; font-weight:800; letter-spacing:-0.5px; display:flex; align-items:center; flex-shrink:0;}
@@ -163,7 +163,7 @@ nav.primary .sub-menu a:hover{background:var(--bg); color:var(--accent);}
 .related-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:16px;}
 
 /* ---------- Single post ---------- */
-.single-post{max-width:780px; margin:0 auto; padding:52px 32px 84px;}
+.single-post{max-width:1000px; margin:0 auto; padding:52px 32px 84px;}
 .single-post .single-tag{background:var(--accent); color:#fff; margin-bottom:16px;}
 .single-post h1{font-size:34px; font-weight:800; line-height:1.38; margin:14px 0; letter-spacing:-0.5px;}
 .single-post .single-meta{display:flex; align-items:center; gap:8px; font-size:13px; color:var(--sub); margin-bottom:30px;}
