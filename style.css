@@ -67,15 +67,16 @@ header.site-header{
 }
 .header-inner{
   max-width:1240px; margin:0 auto; padding:18px 24px;
-  display:flex; align-items:center; justify-content:space-between;
+  display:flex; align-items:center; justify-content:space-between; gap:24px;
 }
-.logo{font-size:21px; font-weight:800; letter-spacing:-0.5px; display:flex; align-items:center;}
+.logo{font-size:21px; font-weight:800; letter-spacing:-0.5px; display:flex; align-items:center; flex-shrink:0;}
 .logo::after{content:''; }
 .logo img{display:block; height:36px; width:auto; max-width:200px;}
 .logo .custom-logo-link{display:flex; align-items:center;}
-nav.primary ul{display:flex; gap:36px; list-style:none;}
+nav.primary{flex:1 1 auto; min-width:0;}
+nav.primary ul{display:flex; flex-wrap:wrap; row-gap:8px; column-gap:28px; list-style:none;}
 nav.primary li{position:relative;}
-nav.primary li a{font-size:17px; font-weight:700; letter-spacing:0.2px; padding:10px 0; display:inline-block;}
+nav.primary li a{font-size:16px; font-weight:700; letter-spacing:0.2px; padding:10px 0; display:inline-block; white-space:nowrap;}
 nav.primary li:hover > a{color:var(--accent);}
 nav.primary li.current-menu-item > a{color:var(--accent);}
 nav.primary .sub-menu{
@@ -87,7 +88,7 @@ nav.primary .sub-menu{
 nav.primary li:hover .sub-menu{display:flex;}
 nav.primary .sub-menu a{font-size:13px; font-weight:500; padding:8px 18px; white-space:nowrap;}
 nav.primary .sub-menu a:hover{background:var(--bg); color:var(--accent);}
-.header-actions{display:flex; align-items:center; gap:18px;}
+.header-actions{display:flex; align-items:center; gap:18px; flex-shrink:0;}
 .burger{display:none; flex-direction:column; gap:4px; padding:12px; cursor:pointer;}
 .burger span{display:block; width:16px; height:2px; background:var(--ink); transition:transform 0.2s ease, opacity 0.2s ease;}
 .burger.is-active span:nth-child(1){transform:translateY(6px) rotate(45deg);}
