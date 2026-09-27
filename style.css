@@ -163,7 +163,7 @@ nav.primary .sub-menu a:hover{background:var(--bg); color:var(--accent);}
 .related-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:16px;}
 
 /* ---------- Single post ---------- */
-.single-post{max-width:760px; margin:0 auto; padding:52px 0 84px;}
+.single-post{max-width:760px; margin:0 auto; padding:52px 32px 84px;}
 .single-post .single-tag{background:var(--accent); color:#fff; margin-bottom:16px;}
 .single-post h1{font-size:34px; font-weight:800; line-height:1.38; margin:14px 0; letter-spacing:-0.5px;}
 .single-post .single-meta{display:flex; align-items:center; gap:8px; font-size:13px; color:var(--sub); margin-bottom:30px;}
